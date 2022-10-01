@@ -1,0 +1,57 @@
+@use "variables" as *;
+
+@mixin max-width {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin reset-margin {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.hero {
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+    
+    h1 {
+        font-size: 2.2rem;
+        @include max-width();    
+    }
+    
+    p {
+        margin-bottom: 4rem;
+        @include max-width();    
+    }
+    
+    img {
+        justify-self: end;
+        @include max-width();    
+        width: 100%;
+        order: -1;
+    }
+    
+    @media (min-width: $tablet-size) {
+        text-align: left;
+        padding-right: 0;
+        
+        h1 {
+            max-width: 500px;
+            font-size: 3.15rem;
+            @include reset-margin();
+        }
+        
+        p {
+            max-width: 350px;
+            @include reset-margin();
+        }
+        
+        img {
+            max-width: 100%;
+            order: 0;
+            @include reset-margin();
+        }
+    }
+}
