@@ -13,10 +13,12 @@
 </head>
 
 <body>
-  <header class="container">
+  <header class="container flex">
     <img src="./images/logo.svg" alt="" class="logo">
 
     <nav>
+      <div class="back-drop"></div>
+
       <ul>
         <li><a href="#">Pricing</a></li>
         <li><a href="#">Product</a></li>
@@ -28,7 +30,10 @@
 
     <a href="#" class="btn bg-primary">Get started</a>
 
-    <img src="images/icon-hamburger.svg" alt="" class="menu">
+    <div class="menu" data-open="true">
+      <img src="./images/icon-hamburger.svg" alt="">
+      <img src="./images/icon-close.svg" alt="">
+    </div>
   </header>
 
   <main>
@@ -165,7 +170,7 @@
     </div>
   </main>
 
-  <footer>
+  <footer class="bg-footer">
     <div class="input-group">
       <input type="text" placeholder="Updates in your inbox…">
 
