@@ -1,4 +1,4 @@
-@use "variables" as var;
+@use "variables" as *;
 @forward "normalize";
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
 
@@ -14,21 +14,26 @@ html {
 body {
     font-size: 16px;
     font-family: 'Be Vietnam Pro', sans-serif;
-    color: var.$clr-text;
+    color: $clr-text;
 }
 
 h1, h2, h3, .name {
-    color: var.$clr-heading;
+    color: $clr-heading;
 }
 
 .bg-primary {
-    color: var.$clr-secondary;
-    background-color: var.$clr-primary;
+    color: $clr-secondary;
+    background-color: $clr-primary;
+}
+
+.bg-secondary {
+    color: $clr-primary;
+    background-color: $clr-secondary;
 }
 
 .bg-footer {
-    color: var.$clr-secondary;
-    background-color: var.$bg-footer;
+    color: $clr-secondary;
+    background-color: $bg-footer;
 }
 
 .container {
