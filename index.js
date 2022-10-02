@@ -1,3 +1,4 @@
+// >menu
 const nav = document.querySelector("header nav");
 const menu = document.querySelector("header .menu");
 menu.children[1].style.display = "none";
@@ -16,4 +17,40 @@ menu.addEventListener("click", (e) => {
     document.querySelector("body").style.height = "100%";
     document.querySelector("body").style.overflow = "auto";
   }
+});
+
+// >slider
+const scrollableSection = document.querySelector(".scrollable");
+const dots = document.querySelectorAll(".slider-dots .dot");
+
+function scrollSlider(e) {
+  dots.forEach((dot, index) => {
+    dot.classList.remove("active");
+
+    if (e.target === dot) {
+      e.target.classList.add("active");
+      scrollableSection.style.setProperty("--scroll", `${-100 * index}%`);
+    }
+  });
+}
+
+function initSlider() {
+  scrollableSection.scrollTo(0, 0);
+
+  dots.forEach((dot, index) => {
+    if (dot.classList.contains("active"))
+      scrollableSection.style.setProperty("--scroll", `${-100 * index}%`);
+
+    dot.removeEventListener("click", scrollSlider);
+    dot.addEventListener("click", scrollSlider);
+  });
+}
+
+initSlider();
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 900)
+    return scrollableSection.style.setProperty("--scroll", "0%");
+
+  initSlider();
 });

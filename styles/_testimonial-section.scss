@@ -1,0 +1,77 @@
+@use "variables" as *;
+
+.testimonials {
+    text-align: center;
+    padding: 0 !important;
+    margin-bottom: 3.5rem;
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    .scrollable {
+        --scroll: 0;
+
+        width: 100%;
+        padding: 2rem 1rem 0;
+        margin: 4rem auto 0;
+        overflow: hidden;
+        
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .testimonial {
+            flex: 0 0 100%;
+            padding-bottom: 1rem;
+            background-color: $clr-secondary;
+            transform: translateX(var(--scroll));
+            transition: transform .35s ease-in;
+
+            .avatar {
+                width: 60px;
+                transform: translateY(-50%);
+            }
+            
+            .name {
+                font-weight: 700;
+            }
+        }
+        
+        @media (min-width: $tablet-size) {
+            gap: 2rem;
+            overflow-x: auto;
+            margin-bottom: 4rem;
+
+            .testimonial {
+                max-width: 520px;
+            }
+        }
+
+        @media (min-width: 2200px) {
+            justify-content: center;
+        }
+    }
+
+    .slider-dots {
+        justify-content: center;
+        gap: .4rem;
+        margin: 1.5rem 0 4.2rem;
+
+        .dot {
+            width: 10px;
+            aspect-ratio: 1;
+            border-radius: 100vh;
+            border: 1px solid $clr-primary;
+            cursor: pointer;
+
+            &.active {
+                background-color: $clr-primary;
+            }
+        }
+
+        @media (min-width: $tablet-size) {            
+            display: none;
+        }
+    }
+}
