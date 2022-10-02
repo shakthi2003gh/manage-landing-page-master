@@ -4,6 +4,7 @@
 @forward "hero-section";
 @forward "about-section";
 @forward "testimonial-section";
+@forward "get-started-section";
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
 
 *, *::after,*::before {
@@ -20,7 +21,7 @@ body {
     font-family: 'Be Vietnam Pro', sans-serif;
     color: $clr-text;
 
-    .get-started, footer{
+    footer{
         display: none;
     }
     

@@ -1,0 +1,36 @@
+@use "variables" as *;
+
+.get-started {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    background: url(../images/bg-simplify-section-mobile.svg) no-repeat 0 50px;
+    
+    & > div {
+        flex-direction: column;
+        align-items: center;
+        font-weight: 500;
+        text-align: center;
+        
+        p {
+            font-size: 1.9rem;
+            line-height: 1.8ch;
+        }
+    }
+
+    @media (min-width: $tablet-size) {
+        padding: 0;
+        background: url(../images/bg-simplify-section-desktop.svg) no-repeat calc(50% + 200px) -170px;       
+
+        & > div {
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: left;
+
+            p {
+                font-size: 2.4rem;
+                max-width: 550px;
+                margin: 1rem 0;
+            }
+        }
+    }
+}
