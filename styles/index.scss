@@ -23,6 +23,8 @@ body {
   font-size: 16px;
   font-family: "Be Vietnam Pro", sans-serif;
   color: $clr-text;
+  background: url(../images/bg-tablet-pattern.svg) no-repeat calc(50% + 480px) -160px,
+    url(../images/bg-tablet-pattern.svg) no-repeat calc(50% - 830px) 1140px;
 }
 
 h1,

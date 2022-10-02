@@ -16,6 +16,7 @@
   .scrollable {
     --scroll: 0;
 
+    gap: 1rem;
     width: 100%;
     padding: 2rem 1rem 0;
     margin: 4rem auto 0;
@@ -77,5 +78,9 @@
     @media (min-width: $tablet-size) {
       display: none;
     }
+  }
+
+  @media (min-width: $tablet-size) {
+    margin: 6rem 0;
   }
 }

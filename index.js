@@ -23,13 +23,21 @@ menu.addEventListener("click", (e) => {
 const scrollableSection = document.querySelector(".scrollable");
 const dots = document.querySelectorAll(".slider-dots .dot");
 
+const slide = (index) =>
+  window.innerWidth < 900 &&
+  scrollableSection.style.setProperty(
+    "--scroll",
+    `calc(${-100 * index}% - (${16 * index}px))`
+  );
+
 function scrollSlider(e) {
   dots.forEach((dot, index) => {
     dot.classList.remove("active");
 
     if (e.target === dot) {
       e.target.classList.add("active");
-      scrollableSection.style.setProperty("--scroll", `${-100 * index}%`);
+
+      slide(index);
     }
   });
 }
@@ -38,8 +46,7 @@ function initSlider() {
   scrollableSection.scrollTo(0, 0);
 
   dots.forEach((dot, index) => {
-    if (dot.classList.contains("active"))
-      scrollableSection.style.setProperty("--scroll", `${-100 * index}%`);
+    if (dot.classList.contains("active")) slide(index);
 
     dot.removeEventListener("click", scrollSlider);
     dot.addEventListener("click", scrollSlider);
