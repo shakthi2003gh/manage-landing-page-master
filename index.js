@@ -54,3 +54,18 @@ window.addEventListener("resize", () => {
 
   initSlider();
 });
+
+// >input
+const inputGroup = document.querySelector(".input-group");
+const input = inputGroup.querySelector("input");
+const submit = inputGroup.querySelector("button");
+
+submit.addEventListener("click", () => {
+  const email = input.value;
+
+  if (!email.includes("@") || !email.endsWith(".com"))
+    return inputGroup.classList.add("error");
+
+  inputGroup.classList.remove("error");
+  input.value = "";
+});

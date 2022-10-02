@@ -5,93 +5,91 @@
 @forward "about-section";
 @forward "testimonial-section";
 @forward "get-started-section";
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+@forward "footer";
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap");
 
-*, *::after,*::before {
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
 html {
-    min-width: 375px;
-    min-height: 100vh;
+  min-width: 375px;
+  min-height: 100vh;
 }
 
 body {
-    font-size: 16px;
-    font-family: 'Be Vietnam Pro', sans-serif;
-    color: $clr-text;
-
-    footer{
-        display: none;
-    }
-    
+  font-size: 16px;
+  font-family: "Be Vietnam Pro", sans-serif;
+  color: $clr-text;
 }
 
-h1, h2, h3, .name, a {
-    color: $clr-heading;
+h1,
+h2,
+h3,
+.name,
+header a {
+  color: $clr-heading;
 }
 
 p {
-    line-height: 2.6ch;
+  line-height: 2.6ch;
 }
 
 ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-
-    &:hover {
-        opacity: .6;
-    }
+  text-decoration: none;
 }
 
 .grid {
-    display: grid;
+  display: grid;
 
-    @media (min-width: $tablet-size) {
-        &--1x2 {
-            grid-template-columns: 1fr 1fr;
-        }
+  @media (min-width: $tablet-size) {
+    &--1x2 {
+      grid-template-columns: 1fr 1fr;
     }
+  }
 }
 
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .bg-primary {
-    color: white;
-    background-color: $clr-primary;
+  color: white;
+  background-color: $clr-primary;
 }
 
 .bg-secondary {
-    color: $clr-primary;
-    background-color: white;
+  color: $clr-primary;
+  background-color: white;
 }
 
 .bg-footer {
-    color: white;
-    background-color: $bg-footer;
+  color: white;
+  background-color: $bg-footer;
 }
 
 .container {
-    max-width: 1300px;
-    padding: 2rem;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 1300px;
+  padding: 2rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .btn {
-    text-transform: capitalize;
-    padding: 1rem 2rem;
-    border-radius: 100px;
-    box-shadow: 0 8px 8px -3px hsl(12deg 88% 59% / 41%);
+  text-transform: capitalize;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  box-shadow: 0 8px 8px -3px hsl(12deg 88% 59% / 41%);
 
-    &.bg-primary:hover {
-        opacity: .9;
-    }
+  &.bg-primary:hover {
+    opacity: 0.9;
+  }
 }
