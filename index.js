@@ -3,7 +3,7 @@ const nav = document.querySelector("header nav");
 const menu = document.querySelector("header .menu");
 menu.children[1].style.display = "none";
 
-menu.addEventListener("click", (e) => {
+function handleMenuToggle() {
   nav.classList.toggle("show");
 
   if (nav.classList.contains("show")) {
@@ -17,6 +17,11 @@ menu.addEventListener("click", (e) => {
     document.querySelector("body").style.height = "100%";
     document.querySelector("body").style.overflow = "auto";
   }
+}
+
+menu.addEventListener("click", handleMenuToggle);
+menu.addEventListener("keyup", (e) => {
+  if (e.code === "Enter") handleMenuToggle();
 });
 
 // >slider

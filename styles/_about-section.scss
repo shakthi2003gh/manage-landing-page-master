@@ -2,95 +2,94 @@
 @use "mixin" as *;
 
 .about {
-    text-align: center;
-    padding: 2rem 1rem !important;
-    padding-right: 0 !important;
-    margin-top: 2rem;
+  text-align: center;
+  padding: 2rem 1rem !important;
+  padding-right: 0 !important;
+  margin-top: 2rem;
+
+  h2 {
+    font-size: 1.9rem;
+    padding-right: 1rem;
+    @include max-width();
+  }
+
+  p {
+    padding-right: 1rem;
+    @include max-width();
+  }
+
+  .features {
+    margin: 3rem 0 0;
+    gap: 2rem;
+  }
+
+  .feature {
+    text-align: left;
+    list-style-type: none;
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 700;
+      border-top-left-radius: 100vh;
+      border-bottom-left-radius: 100vh;
+      background-color: $clr-accent;
+
+      .index {
+        padding: 0.8rem 1.7rem;
+        border-radius: 100vh;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        margin: 0;
+      }
+    }
+
+    p {
+      @include reset-margin();
+    }
+  }
+
+  @media (min-width: $tablet-size) {
+    padding-left: 2rem !important;
+    text-align: left;
+    gap: 1rem;
 
     h2 {
-        font-size: 1.9rem;
-        padding-right: 1rem;
-        @include max-width();
+      font-size: 2.4rem;
+      max-width: 500px;
+      padding: 0;
+      margin-top: 0;
+      @include reset-margin();
     }
-    
+
     p {
-        padding-right: 1rem;
-        @include max-width();
+      max-width: 350px;
+      padding: 0;
+      @include reset-margin();
     }
 
     .features {
-        margin: 3rem 0 0;
-        gap: 2rem;
+      margin: 0;
+      justify-items: end;
     }
-    
+
     .feature {
-        text-align: left;
+      .header {
+        gap: 1.5rem;
+        background-color: transparent;
 
-        .header {   
-            display: flex;
-            align-items: center;
-            gap: .6rem;
-            font-weight: 700;
-            border-top-left-radius: 100vh;
-            border-bottom-left-radius: 100vh;
-            background-color: $clr-accent;
-
-            .index {
-                padding: .8rem 1.7rem;
-                border-radius: 100vh;
-            }
-
-            h3 {
-                font-size: 1.1rem;
-                margin: 0
-            }
+        .index {
+          padding: 0.6rem 1.7rem;
         }
+      }
 
-        p {
-            @include reset-margin();
-        }
+      p {
+        max-width: 450px;
+        margin-left: 6.2rem;
+      }
     }
-
-    
-    @media (min-width: $tablet-size) {
-        padding-left: 2rem !important;
-        text-align: left;
-        gap: 1rem;
-
-        h2 {
-            font-size: 2.4rem;
-            max-width: 500px;
-            padding: 0;
-            margin-top: 0;
-            @include reset-margin();
-        }
-
-        p {
-            max-width: 350px;
-            padding: 0;
-            @include reset-margin();
-        }
-
-        .features {
-            margin: 0;
-            justify-items: end;
-        }
-
-        .feature {
-            .header {
-                gap: 1.5rem;
-                background-color: transparent;
-
-                .index {
-                    padding: .6rem 1.7rem;
-                }
-            }
-
-
-            p {
-                max-width: 450px;
-                margin-left: 6.2rem;
-            }
-        }
-    }
+  }
 }

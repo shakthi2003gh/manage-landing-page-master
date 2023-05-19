@@ -14,7 +14,14 @@
 
 <body>
   <header class="container flex">
-    <img src="./images/logo.svg" alt="" class="logo">
+    <a href="/" aria-label="manage home page"><img src="./images/logo.svg" alt="" class="logo"></a>
+
+    <a href="#main" class="a11y" role="button" aria-label="Skip to main content">Skip to main content</a>
+
+    <div class="menu" data-open="true" aria-label="menu" role="button" tabindex="0">
+      <img src="./images/icon-hamburger.svg" alt="">
+      <img src="./images/icon-close.svg" alt="">
+    </div>
 
     <nav>
       <div class="back-drop"></div>
@@ -28,15 +35,10 @@
       </ul>
     </nav>
 
-    <a href="#" class="btn bg-primary">Get started</a>
-
-    <div class="menu" data-open="true">
-      <img src="./images/icon-hamburger.svg" alt="">
-      <img src="./images/icon-close.svg" alt="">
-    </div>
+    <a href="#" class="btn bg-primary" role="button">Get started</a>
   </header>
 
-  <main>
+  <main id="main">
     <div class="hero container grid grid--1x2">
       <section>
         <h1>Bring everyone together to build better products.</h1>
@@ -46,7 +48,7 @@
           tasks while keeping the larger team goals in view.
         </p>
 
-        <a href="#" class="btn bg-primary">Get started</a>
+        <a href="#" class="btn bg-primary" role="button">Get started</a>
       </section>
 
       <img src="./images/illustration-intro.svg" alt="">
@@ -64,47 +66,49 @@
       </section>
 
       <div class="features grid">
-        <div class="feature">
-          <div class="header">
-            <span class="index bg-primary">01</span>
+        <ol>
+          <li class="feature">
+            <div class="header">
+              <span class="index bg-primary" aria-hidden="true">01</span>
 
-            <h3>Track company-wide progress</h3>
-          </div>
+              <h3>Track company-wide progress</h3>
+            </div>
 
-          <p>
-            See how your day-to-day tasks fit into the wider vision. Go from
-            tracking progress at the milestone level all the way done to the
-            smallest of details. Never lose sight of the bigger picture again.
-          </p>
-        </div>
+            <p>
+              See how your day-to-day tasks fit into the wider vision. Go from
+              tracking progress at the milestone level all the way done to the
+              smallest of details. Never lose sight of the bigger picture again.
+            </p>
+          </li>
 
-        <div class="feature">
-          <div class="header">
-            <span class="index bg-primary">02</span>
+          <li class="feature">
+            <div class="header">
+              <span class="index bg-primary" aria-hidden="true">02</span>
 
-            <h3>Advanced built-in reports</h3>
-          </div>
+              <h3>Advanced built-in reports</h3>
+            </div>
 
-          <p>
-            Set internal delivery estimates and track progress toward company
-            goals. Our customisable dashboard helps you build out the reports
-            you need to keep key stakeholders informed.
-          </p>
-        </div>
+            <p>
+              Set internal delivery estimates and track progress toward company
+              goals. Our customisable dashboard helps you build out the reports
+              you need to keep key stakeholders informed.
+            </p>
+          </li>
 
-        <div class="feature">
-          <div class="header">
-            <span class="index bg-primary">03</span>
+          <li class="feature">
+            <div class="header">
+              <span class="index bg-primary" aria-hidden="true">03</span>
 
-            <h3>Everything you need in one place</h3>
-          </div>
+              <h3>Everything you need in one place</h3>
+            </div>
 
-          <p>
-            Stop jumping from one service to another to communicate, store files,
-            track tasks and share documents. Manage offers an all-in-one team
-            productivity solution.
-          </p>
-        </div>
+            <p>
+              Stop jumping from one service to another to communicate, store files,
+              track tasks and share documents. Manage offers an all-in-one team
+              productivity solution.
+            </p>
+          </li>
+        </ol>
       </div>
     </div>
 
@@ -165,7 +169,7 @@
         <i class="dot"></i>
       </div>
 
-      <a href="#" class="btn bg-primary">Get started</a>
+      <a href="#" class="btn bg-primary" role="button">Get started</a>
     </div>
 
     <div class="get-started bg-primary">
